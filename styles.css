@@ -276,10 +276,7 @@ img { max-width: 100%; }
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.pub-badges .funded {
-  background: #f5e8eb;
-  color: #7c2937;
-}
+
 .pub-badges .award {
   background: #f3ead8;
   color: #755117;
@@ -307,36 +304,11 @@ img { max-width: 100%; }
   background: var(--navy);
 }
 .light { color: #d7b3b9 !important; }
-.award-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  margin-top: 48px;
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(255,255,255,.16);
-}
-.award-grid article {
-  min-height: 210px;
-  padding: 32px;
-  background: var(--navy);
-}
-.award-grid span {
-  color: #d7b3b9;
-  font-size: .76rem;
-  font-weight: 850;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-.award-grid h3 {
-  margin: 40px 0 10px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
-  line-height: 1.25;
-}
-.award-grid p {
-  margin: 0;
-  color: #bfc9d6;
-}
+
+
+
+
+
 blockquote {
   margin: 34px 0 20px;
   padding: 24px 28px;
@@ -393,7 +365,7 @@ blockquote {
   .section { padding: 72px 0; }
   .hero-copy { max-width: 980px; }
 .hero h1 { font-size: clamp(3.1rem, 15vw, 4.6rem); }
-  .award-grid { grid-template-columns: 1fr; }
+  
   
   
   .section-heading-row { align-items: start; flex-direction: column; }
@@ -423,4 +395,49 @@ blockquote {
 
 .hero-copy {
   max-width: 940px;
+}
+
+
+
+
+
+
+/* Simple awards and scholarships list */
+.awards-simple {
+  align-items: start;
+}
+.award-list {
+  border-top: 1px solid var(--line);
+}
+.award-list article {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 28px;
+  padding: 27px 0;
+  border-bottom: 1px solid var(--line);
+}
+.award-list .award-date {
+  margin: 3px 0 0;
+  color: var(--accent);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.award-list h3 {
+  margin: 0 0 5px;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+.award-list article div p {
+  margin: 0;
+  color: var(--muted);
+}
+@media (max-width: 680px) {
+  .award-list article {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
 }
